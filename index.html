@@ -4,368 +4,247 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Tourist Site</title>
     <style>
         body {
-            font-family: 'Times New Roman', serif;
             margin: 0;
-            padding: 20;
-            background: linear-gradient(to bottom, light pink,  light red);
-            color: light green;
-            line-height: 1.2;
+            padding: 0;
+            font-family: 'Times New Roman', sans-serif;
+            background-image: url('https://previews.123rf.com/images/evrojay/evrojay1802/evrojay180200453/96446318-a-branch-of-pink-gladiolus-on-a-gentle-soft-toned-background-beautiful-delicate-flower-vertical.jpg') ;
+            background-size: cover;
+            color: black;
         }
-        
 
         header {
-            background-image: url('https://t3.ftcdn.net/jpg/00/64/16/84/360_F_64168411_KE6FpZ0VhLElbPn7f6eztY7WmbvhpMWz.jpg');
+            background-image: url('https://media.cntraveler.com/photos/61eae2a9fe18edcbd885cb01/1:1/w_3031,h_3031,c_limit/Seychelles_GettyImages-1169388113.jpg'); 
             background-size: cover;
-            color: blueviolet;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
             text-align: center;
-            padding: 3.8em;
+        }
+
+        header h1 {
             font-size: 3em;
+            margin-bottom: 20px;
+        }
+
+        header p {
+            font-size: 2.5em;
+            margin-bottom: 40px;
         }
 
         nav {
-            background: darkorange;
-            padding: 1em;
+            background-color: grey;
+            padding: 20px 0;
             text-align: center;
         }
 
         nav a {
             color: white;
-            text-decoration: red;
-            text-overflow: red;
-            margin: 0 1em;
-            font-weight: bold;
-            font-size: 1.2em;
-            transition: color 0.3s ease;
+            text-decoration: none;
+            margin: 0 20px;
+            font-size: 1.5em;
+            transition: color 0.3s ease-in-out;
         }
 
         nav a:hover {
-            color: black;
+            color: red; 
         }
 
-        .search-section {
+        section {
+            padding: 50px;
+        }
+
+        section h2 {
             text-align: center;
-            padding: 1em;
-            background-image: url('https://static.toiimg.com/photo/43425856.cms');
-            background-size: cover;
+            margin-bottom: 30px;
+            font-size: 2em;
         }
 
-        #search-form {
-            display: flexbox;
-            justify-content: center;
-            align-items: center;
+        section p {
+            font-size: 1.2em;
+            line-height: 1.6;
+            color: slateblue;
         }
 
-        input {
-            padding: 0.8em;
-            margin-right: 0.5em;
-            border: square;
-            border-radius: 4px;
-            font-size: 1em;
-        }
-
-        button {
-            padding: 0.9em 2.5em;
-            background: black;
-            color: white;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            font-size: 1em;
-            transition: background 0.5s ease;
-        }
-
-        button:hover {
-            background: green;
-        }
-
-        .featured-destinations123 {
-            padding: 3em;
-            display: square;
+        .destination-cards {
+            display: flex;
             justify-content: space-around;
             flex-wrap: wrap;
-            background-image: url('https://cdn.wallpapersafari.com/69/91/qrs9ed.jpg');
-        <h2>Contact Us</h2>
-        <!-- ... (existing content) ... -->
-    </section>
-
-    <!-- ... (existing content) ... -->
-
-    <form action="process_form.php" method="post">
-        <h2>Contact Us</h2>
-        <!-- ... (existing form content) ... -->
-    </form>');
-            background-size: cover;
         }
 
-
-        .destination-card1 {
-            width: 30%;
-            background-image: url('https://www.timsphotos.com/hosted/images/c6/3ba5112dbc11e9b240ad71b1c8282b/Moraine-Lake-under-snow-3510-4k-sRGB.jpg');
-            background-size: cover;
+        .destination-card {
+            width: 300px;
+            margin-bottom: 30px;
             border: 1px solid red;
-            border-radius: 5px;
-            padding: 2.5em;
-            margin-bottom: 1.5em;
-            transition: transform 0.5s ease;
+            border-radius: 8px;
             overflow: hidden;
-            position: relative;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
         }
 
-        .destination-card1 img {
-            width: 100%;
-            border-radius: 75px;
-            margin-bottom: 1em;
-            background-image: url('https://images.unsplash.com/photo-1510414842594-a61c69b5ae57?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
-            background-size: cover;
-        }
-
-        .destination-card1 h3 {
-            color: yellow;
-            margin-bottom: 0.5em;
-        }
-
-        .destination-card1 p {
-            color: white;
-        }
-
-        .destination-card1:hover {
+        .destination-card:hover {
             transform: scale(1.05);
+            box-shadow: 0 0 20px red(0, 0, 0, 0.2);
         }
 
-        .destination-card2 {
-            width: 30%;
-            background-image: url('https://th-thumbnailer.cdn-si-edu.com/69-CZPc_CnCn6505Q33GRrgq7ZQ=/800x600/filters:focal(1471x1061:1472x1062)/https://tf-cmsv2-smithsonianmag-media.s3.amazonaws.com/filer/b6/30/b630b48b-7344-4661-9264-186b70531bdc/istock-478831658.jpg');
-            background-size: cover;
-            border: 1px solid red;
-            border-radius: 5px;
-            padding: 2.5em;
-            margin-bottom: 1.5em;
-            transition: transform 0.5s ease;
-            overflow: hidden;
-            position: relative;
-        }
-
-        .destination-card2 img {
+        .destination-card img {
             width: 100%;
-            border-radius: 75px;
-            margin-bottom: 1em;
-            background-image: url('https://th-thumbnailer.cdn-si-edu.com/69-CZPc_CnCn6505Q33GRrgq7ZQ=/800x600/filters:focal(1471x1061:1472x1062)/https://tf-cmsv2-smithsonianmag-media.s3.amazonaws.com/filer/b6/30/b630b48b-7344-4661-9264-186b70531bdc/istock-478831658.jpg');
-            background-size: cover;
+            height: 200px;
+            object-fit: cover;
         }
 
-        .destination-card2 h3 {
-            color: darkblue;
-            margin-bottom: 0.5em;
-        }
-
-        .destination-card2 p {
-            color: white;
-        }
-
-        .destination-card2:hover {
-            transform: scale(1.05);
-
-
-        }.destination-card3 {
-            width: 30%;
-            background-image: url('https://templeworshippers.in/wp-content/uploads/2020/09/Thillai-Nataraja-Temple-Chidambaram.jpg');
-            background-size: cover;
-            border: 1px solid red;
-            border-radius: 5px;
-            padding: 2.5em;
-            margin-bottom: 1.5em;
-            transition: transform 0.5s ease;
-            overflow: hidden;
-            position: relative;
-        }
-
-        .destination-card3 img {
-            width: 100%;
-            border-radius: 75px;
-            margin-bottom: 1em;
-            background-image: url('https://templeworshippers.in/wp-content/uploads/2020/09/Thillai-Nataraja-Temple-Chidambaram.jpg');
-            background-size: cover;
-        }
-
-        .destination-card3 h3 {
-            color: darkblue;
-            margin-bottom: 0.5em;
-        }
-
-        .destination-card3 p {
-            color: white;
-        }
-
-        .destination-card3:hover {
-            transform: scale(1.05);
-        }
-
-    
-
-        footer {
-            background: darkblue;
-            color: #ecf0f1;
-            text-align: center;
-            padding: 1em;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-        }
-    </style>
-    <title>Your Travel Site</title>
-</head>
-
-<body>
-    <header><i><b>
-        Exploring the Beauty Awaits for You
-    </b>
-    </i></header>
-
-
-    <nav>
-        <a href="#about us">About us</a>
-        <a href="#destinations">Destinations</a>
-        <a href="#contact">Contact us</a>
-    </nav>
-
-<!-- ... -->
-
-<section class="featured-destinations" id="destinations">
-    <!-- Your destination sections -->
-</section>
-
-<section id="contact" class="featured-destinations">
-    <!-- The content of your contact section goes here -->
-</section>
-
-
-
-
-    <section class="search-section">
-        <h2>Discover the Real Tourism</h2>
-        <form id="search-form">
-            <input type="text" placeholder="Enter a destination">
-            <button type="submit">Search</button>
-        </form>
-    </section>
-
-    <section class="featured-destinations" id="destinations">
-        <h2><i><b>Nature with Us</b></i></h2>
-        <div class="destination-card1">
-            <img src="Moraine Lake.jpg" alt="Moraine Lake">
-            <h3><i><b>Moraine Lake</b></i></h3>
-            <p><b>Explore the beauty of Moraine Lake</b></p>
-            <p><b>Most Beautiful Lake around the World</b></p>
-        </div>
-        
-    </section><section class="featured-destinations" id="destinations">
-        <h2>Happy Tourism</h2>
-        <div class="destination-card2">
-            <img src="Taj Mahal.jpg" alt="Taj Mahal">
-            <h3><i><b>Taj Mahal</b></i></h3>
-            <p><b>Enjoy the Beauty of Heaven</b></p>
-            <p><b>Seventh Wonder of our World</b></p>
-        </div>
-        <!-- Repeat the structure for more destinations -->
-    </section>
-
-
-</section><section class="featured-destinations" id="destinations">
-        <h2>Divine Tourism</h2>
-        <div class="destination-card3">
-            <img src="Chidambaram Temple.jpg" alt="Chidambaram Temple">
-            <h3><i><b>Chidambaram Temple</b></i></h3>
-            <p><b>Most Powerfull Divine spot along the Tamil Nadu</b></p>
-            <p><b>Lot of Positivity brings Good Vibes</b></p>
-        </div>
-        <!-- Repeat the structure for more destinations -->
-    </section>
-
-    <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us</title>
-    <style>
-        body {
-            font-family: Times New Roman, serif;
-            margin: 0;
-            padding: 10;
-            display: flex;
-            background-image: url('https://hips.hearstapps.com/hmg-prod/images/champagne-beach-espiritu-santo-island-vanuatu-royalty-free-image-1655672510.jpg?crop=1.00xw:0.755xh;0,0.173xh&resize=1200:*');
-            background-size: cover;
-            flex-direction: column;
-            min-height: 10vh; 
-        }
-
-        main {
-            flex: 1; 
-            padding: 10px;
+        .destination-card-content {
+            padding: 20px;
         }
 
         form {
-            max-width: 400px;
-            margin: 80px auto;
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: left;
         }
 
-        label {
-            display: square;
+        form label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        form input,
+        form textarea {
+            width: 100%;
+            padding: 10px;
             margin-bottom: 20px;
         }
 
-        input, textarea {
-            width: 100%;
-            padding: 8px;
-            margin-bottom: 5px;
-            box-sizing: border-box;
-        }
-
-        input[type="submit"] {
-            background-color: red;
+        form button {
+            background-color: black;
             color: white;
+            padding: 15px 25px;
+            border: none;
             cursor: pointer;
+            transition: background-color 0.3s ease-in-out;
         }
 
-        input[type="submit"]:hover {
-            background-color: #45a049;
+        form button:hover {
+            background-color: black; /* Change the background color on hover */
+        }
+
+        footer {
+            background-color: grey;
+            color: #fff;
+            text-align: center;
+            padding: 5px 0;
         }
     </style>
 </head>
 
-
 <body>
-    <main>
-        <!-- Your main content goes here -->
-        <h1>Let us Make Conversation Better</h1>
-        <h3><i>We are here to give support about your experience</i></h3>
-    </main>
 
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#discover">Discover</a>
+        <a href="#destinations">Destinations</a>
+        <a href="#contact">Contact Us</a>
+    </nav>
 
-    <form action="process_form.php" method="post">
+    <header>
+        <div>
+            <h1><i><b>Your Journey Of Joy Awaits</b></i></h1>
+            <h2><i><b>Explore the Beauty of Heavens of the World</b></i></h2>
+        </div>
+    </header>
+
+    <section id="home">
+        <h2><i><b>About us</b></i></h2>
+        <p>We are delighted to introduce our Travel Site for your Wonderful Travel Experience with a smile on your place.
+            We offer various tourist Places around the World for your convienience and other happy tourists.We are here to 
+            introduce you to the different kinds of people and different types of Destinations around the World.
+            Enjoy Tourism with our exciting offers and delightful packages. <i><b>Adventure of Tourism Awaits for you with us.</b></i>
+            Our foremost thing is to bring your face smily and happy towards our journey.
+        </p>
+    </section>
+
+    <section id="discover">
+        <h2><i><b>Discover</b></i></h2>
+        <p>We offer various different places spotted around the different countries.It will be more convinient to enjoy the 
+            places with good mindset.We iclude various Continents like <i>Asia, Africa, Australia, North and South America and Europe.</i>
+            We are delighted to introduce countries like <i><b>India, Maldives, South Africa, Egypt, Canada, America, China, Australia, Italy, 
+                Germany, France, Vietnam, Thailand,Singapore and Malaysia</b></i> and various other Countries.</p>
+                <p>Some other packages includes various Tourist spots around the World such as <i><b>Taj Mahal, Great Egypt of Majestic Pharahos, 
+                    Beautiful Moraine Lake, Lovely Islands of Maldives, City of LOve-Paris, The Great Alexander's Town, Niagra Waterfalls</b></i>
+                and various other destinations</p>
+                    
+    </section>
+
+    <section id="destinations">
+        <h2><i><b>Destinations</b></i></h2>
+        <div class="destination-cards">
+            <div class="destination-card">
+                <img src="https://www.timsphotos.com/hosted/images/c6/3ba5112dbc11e9b240ad71b1c8282b/Moraine-Lake-under-snow-3510-4k-sRGB.jpg" alt="Destination 1">
+                <div class="destination-card-content">
+                    <h3><i><b>Moraine Lake</b></i></h3>
+                    <p>The most beautiful Lake in the World</p>
+                    <p>Wonders in different Seasons</p>
+                    <p>Constructs a Natural Beauty</p>
+                </div>
+            </div>
+
+            <div class="destination-card">
+                <img src="https://t3.ftcdn.net/jpg/03/04/85/26/360_F_304852693_nSOn9KvUgafgvZ6wM0CNaULYUa7xXBkA.jpg" alt="Destination 2">
+                <div class="destination-card-content">
+                    <h3><i><b>Taj Mahal</b></i></h3>
+                    <p>Seventh Wonder of our World</p>
+                    <p>Considered symbol of Love</p>
+                    <p>Buiding is full of Precious Marbles</p>
+                </div>
+            </div>
+
+            <div class="destination-card">
+                <img src="https://cdn.britannica.com/11/83811-050-8A8D9F24/Island-resort-Maldives-Indian-Ocean.jpg" alt="Destination 3">
+                <div class="destination-card-content">
+                    <h3><i><b>Maldives</b></i></h3>
+                    <p>Heaven of Tourism with Treasure</p>
+                    <p>Beautiful Sunrise with a Lovely Nature</p>
+                    <p>Perfectly made for Nature Lovers</p>
+                </div>
+            </div>
+
+            <div class="destination-card">
+                <img src="https://travel.home.sndimg.com/content/dam/images/travel/stock/2016/6/27/0/GettyImages-594835943_great-pyramid-of-giza-egypt.jpg.rend.hgtvcom.616.462.suffix/1491841321970.jpeg" alt="Destination 4">
+                <div class="destination-card-content">
+                    <h3><i><b>Egypt</b></i></h3>
+                    <p>Oldest Civilisation in the World</p>
+                    <p>One of the Wonders of the World</p>
+                    <p>Great Engineering Technical Structures</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
         <h2>Contact Us</h2>
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required>
+        <form>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
 
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
 
-        <label for="message">Message:</label>
-        <textarea id="message" name="message" rows="4" required></textarea>
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
 
-        <input type="submit" value="Submit">
-    </form>
-</body>
-</html>
-
-
-
+            <button type="submit">Submit</button>
+        </form>
+    </section>
 
     <footer>
-        &copy; 2023 My Travel Site. All rights reserved.
+        <h3>&copy; 2023 Your Tourist Place. All rights reserved.</h3>
     </footer>
+
 </body>
 
 </html>
